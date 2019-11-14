@@ -4,7 +4,7 @@ declare(strict_types=1);
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\MorphOne;
-use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
+use Omt\Mongodb\Eloquent\Model as Eloquent;
 
 class Client extends Eloquent
 {

@@ -2,8 +2,8 @@
 declare(strict_types=1);
 
 use Illuminate\Support\Facades\DB;
-use Jenssegers\Mongodb\Collection;
-use Jenssegers\Mongodb\Query\Builder;
+use Omt\Mongodb\Collection;
+use Omt\Mongodb\Query\Builder;
 use MongoDB\BSON\ObjectId;
 use MongoDB\BSON\Regex;
 use MongoDB\BSON\UTCDateTime;

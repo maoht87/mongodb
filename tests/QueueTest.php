@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-use Jenssegers\Mongodb\Queue\Failed\MongoFailedJobProvider;
+use Omt\Mongodb\Queue\Failed\MongoFailedJobProvider;
 
 class QueueTest extends TestCase
 {
@@ -21,7 +21,7 @@ class QueueTest extends TestCase
 
         // Get and reserve the test job (next available)
         $job = Queue::pop('test');
-        $this->assertInstanceOf(Jenssegers\Mongodb\Queue\MongoJob::class, $job);
+        $this->assertInstanceOf(Omt\Mongodb\Queue\MongoJob::class, $job);
         $this->assertEquals(1, $job->isReserved());
         $this->assertEquals(json_encode([
             'displayName' => 'test',

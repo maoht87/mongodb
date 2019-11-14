@@ -27,10 +27,10 @@ class TestCase extends Orchestra\Testbench\TestCase
     protected function getPackageProviders($app)
     {
         return [
-            Jenssegers\Mongodb\MongodbServiceProvider::class,
-            Jenssegers\Mongodb\MongodbQueueServiceProvider::class,
-            Jenssegers\Mongodb\Auth\PasswordResetServiceProvider::class,
-            Jenssegers\Mongodb\Validation\ValidationServiceProvider::class,
+            Omt\Mongodb\MongodbServiceProvider::class,
+            Omt\Mongodb\MongodbQueueServiceProvider::class,
+            Omt\Mongodb\Auth\PasswordResetServiceProvider::class,
+            Omt\Mongodb\Validation\ValidationServiceProvider::class,
         ];
     }
 
