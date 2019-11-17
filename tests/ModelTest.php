@@ -4,7 +4,7 @@ declare(strict_types=1);
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
-use Jenssegers\Mongodb\Eloquent\Model;
+use Omt\Mongodb\Eloquent\Model;
 use MongoDB\BSON\ObjectID;
 use MongoDB\BSON\UTCDateTime;
 
@@ -22,7 +22,7 @@ class ModelTest extends TestCase
     {
         $user = new User;
         $this->assertInstanceOf(Model::class, $user);
-        $this->assertInstanceOf(\Jenssegers\Mongodb\Connection::class, $user->getConnection());
+        $this->assertInstanceOf(\Omt\Mongodb\Connection::class, $user->getConnection());
         $this->assertFalse($user->exists);
         $this->assertEquals('users', $user->getTable());
         $this->assertEquals('_id', $user->getKeyName());
@@ -477,24 +477,24 @@ class ModelTest extends TestCase
         User::create(['name' => 'Jane Doe', 'age' => 35]);
         User::create(['name' => 'Harry Hoe', 'age' => 15]);
 
-        $users = User::raw(function (\Jenssegers\Mongodb\Collection $collection) {
+        $users = User::raw(function (\Omt\Mongodb\Collection $collection) {
             return $collection->find(['age' => 35]);
         });
         $this->assertInstanceOf(Collection::class, $users);
         $this->assertInstanceOf(Model::class, $users[0]);
 
-        $user = User::raw(function (\Jenssegers\Mongodb\Collection $collection) {
+        $user = User::raw(function (\Omt\Mongodb\Collection $collection) {
             return $collection->findOne(['age' => 35]);
         });
 
         $this->assertInstanceOf(Model::class, $user);
 
-        $count = User::raw(function (\Jenssegers\Mongodb\Collection $collection) {
+        $count = User::raw(function (\Omt\Mongodb\Collection $collection) {
             return $collection->count();
         });
         $this->assertEquals(3, $count);
 
-        $result = User::raw(function (\Jenssegers\Mongodb\Collection $collection) {
+        $result = User::raw(function (\Omt\Mongodb\Collection $collection) {
             return $collection->insertOne(['name' => 'Yvonne Yoe', 'age' => 35]);
         });
         $this->assertNotNull($result);

@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-use Jenssegers\Mongodb\Schema\Blueprint;
+use Omt\Mongodb\Schema\Blueprint;
 
 class SchemaTest extends TestCase
 {

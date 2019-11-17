@@ -6,8 +6,8 @@ use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 use Illuminate\Notifications\Notifiable;
-use Jenssegers\Mongodb\Eloquent\HybridRelations;
-use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
+use Omt\Mongodb\Eloquent\HybridRelations;
+use Omt\Mongodb\Eloquent\Model as Eloquent;
 
 /**
  * Class User

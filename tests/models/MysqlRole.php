@@ -4,7 +4,7 @@ declare(strict_types=1);
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use Jenssegers\Mongodb\Eloquent\HybridRelations;
+use Omt\Mongodb\Eloquent\HybridRelations;
 
 class MysqlRole extends Eloquent
 {

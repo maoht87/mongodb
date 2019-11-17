@@ -1,8 +1,8 @@
 <?php
 declare(strict_types=1);
 
-use Jenssegers\Mongodb\Collection;
-use Jenssegers\Mongodb\Connection;
+use Omt\Mongodb\Collection;
+use Omt\Mongodb\Connection;
 use MongoDB\BSON\ObjectID;
 use MongoDB\Collection as MongoCollection;
 

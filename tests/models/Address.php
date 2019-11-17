@@ -1,8 +1,8 @@
 <?php
 declare(strict_types=1);
 
-use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
-use Jenssegers\Mongodb\Relations\EmbedsMany;
+use Omt\Mongodb\Eloquent\Model as Eloquent;
+use Omt\Mongodb\Relations\EmbedsMany;
 
 class Address extends Eloquent
 {
